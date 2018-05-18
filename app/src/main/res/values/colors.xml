@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#919cd6</color>
+    <color name="colorPrimaryDark">#484c65</color>
+    <color name="colorAccent">#5f2a3c</color>
+    <color name="ball">#18582a</color>
+    <color name="Hole">#2b302d</color>
+    <color name="White">#ffffff</color>
+
+</resources>
