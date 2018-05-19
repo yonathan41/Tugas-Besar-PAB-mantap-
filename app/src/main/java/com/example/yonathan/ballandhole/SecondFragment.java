@@ -7,12 +7,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
 public class SecondFragment extends Fragment implements View.OnClickListener {
     Button play;
     FragmentListener listener;
+
     public SecondFragment() {
         // Required empty public constructor
     }
+
     public static SecondFragment newInstance() {
         SecondFragment fragment = new SecondFragment();
         return fragment;
@@ -27,9 +30,11 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_second, container, false);
-        this.play= view.findViewById(R.id.play);
+        View view = inflater.inflate(R.layout.fragment_second, container, false);
+        this.play = view.findViewById(R.id.play);
+//        this.exit= view.findViewById(R.id.exxit);
         play.setOnClickListener(this);
+//        exit.setOnClickListener(this);
         return view;
     }
 
@@ -41,18 +46,19 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if(v==play){
+        if (v == play) {
             listener.changePage(1);
+        } else {
+//            this.getActivity().finish();
         }
     }
 
-    public void onAttach(Context context){
+    public void onAttach(Context context) {
         super.onAttach(context);
-        if(context instanceof  FragmentListener){
-            this.listener=(FragmentListener)context;
-        }
-        else{
-            throw new ClassCastException(context.toString()+"must implements FragmentListener");
+        if (context instanceof FragmentListener) {
+            this.listener = (FragmentListener) context;
+        } else {
+            throw new ClassCastException(context.toString() + "must implements FragmentListener");
         }
     }
 }

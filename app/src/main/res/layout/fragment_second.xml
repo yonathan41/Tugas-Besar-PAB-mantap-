@@ -11,16 +11,18 @@
         android:layout_gravity="center"
         android:layout_centerInParent="true"
         android:text="Play"
+        android:layout_marginLeft="10dp"
         android:id="@+id/play"
         />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/play"
-        android:text="exit"
-        android:id="@+id/exxit"
-        />
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_below="@id/play"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:text="exit"-->
+        <!--android:id="@+id/exxit"-->
+        <!--/>-->
 
 </RelativeLayout>
