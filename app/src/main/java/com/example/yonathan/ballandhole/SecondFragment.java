@@ -32,9 +32,7 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_second, container, false);
         this.play = view.findViewById(R.id.play);
-//        this.exit= view.findViewById(R.id.exxit);
         play.setOnClickListener(this);
-//        exit.setOnClickListener(this);
         return view;
     }
 
@@ -48,8 +46,6 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         if (v == play) {
             listener.changePage(1);
-        } else {
-//            this.getActivity().finish();
         }
     }
 

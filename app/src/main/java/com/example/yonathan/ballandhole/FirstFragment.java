@@ -220,7 +220,7 @@ public class FirstFragment extends Fragment implements SensorEventListener, View
     }
 
     private void initiateCanvas(Canvas canvas) {
-        int color = ResourcesCompat.getColor(getResources(), R.color.White, null);
+        int color = ResourcesCompat.getColor(getResources(), R.color.Canvas, null);
         mCanvas = canvas;
         mCanvas.drawColor(color);
         strokePaint = new Paint();

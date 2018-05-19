@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Setting">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change ball color"
+        android:id="@+id/bt_ballColor"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change backgroud color"
+        android:layout_below="@id/bt_ballColor"
+        android:id="@+id/bt_backColor"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_backColor"
+        android:text="ganti ukuran bola "
+        android:id="@+id/btn_gantiUkuran"
+        android:layout_marginTop="20dp"
+        />
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_backColor"
+        android:layout_toRightOf="@id/btn_gantiUkuran"
+        />
+</RelativeLayout>
