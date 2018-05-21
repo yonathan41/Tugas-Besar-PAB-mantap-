@@ -34,5 +34,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/bt_backColor"
         android:layout_toRightOf="@id/btn_gantiUkuran"
+        android:id="@+id/et_ballSize"
         />
 </RelativeLayout>

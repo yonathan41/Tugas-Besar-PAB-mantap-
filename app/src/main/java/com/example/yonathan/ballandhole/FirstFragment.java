@@ -48,6 +48,7 @@ public class FirstFragment extends Fragment implements SensorEventListener, View
     int colorHole;
     int colorBall;
     CountDownTimer start;
+//    Setting setting;
 
     public FirstFragment() {
         // Required empty public constructor
@@ -69,8 +70,15 @@ public class FirstFragment extends Fragment implements SensorEventListener, View
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_first, container, false);
         this.ivArena = view.findViewById(R.id.iv_arena);
-        colorHole = ResourcesCompat.getColor(getResources(), R.color.Hole, null);
-        colorBall = ResourcesCompat.getColor(getResources(), R.color.ball, null);
+//        setting= new Setting();
+//        if(setting.ballColor!=0){
+//            colorBall = setting.ballColor;
+//        }
+//        else{
+            colorBall = ResourcesCompat.getColor(getResources(), R.color.ball, null);
+//        }
+            colorHole = ResourcesCompat.getColor(getResources(), R.color.Hole, null);
+
         createArena();
         this.timer = view.findViewById(R.id.timer);
         this.score = view.findViewById(R.id.Score);
@@ -220,7 +228,13 @@ public class FirstFragment extends Fragment implements SensorEventListener, View
     }
 
     private void initiateCanvas(Canvas canvas) {
-        int color = ResourcesCompat.getColor(getResources(), R.color.Canvas, null);
+        int color;
+//        if(setting.canvasColor!=Integer.MIN_VALUE){
+//            color=setting.canvasColor;
+//        }
+//        else {
+            color = ResourcesCompat.getColor(getResources(), R.color.Canvas, null);
+//        }
         mCanvas = canvas;
         mCanvas.drawColor(color);
         strokePaint = new Paint();
@@ -273,16 +287,17 @@ public class FirstFragment extends Fragment implements SensorEventListener, View
 
         } else {
             create();
-            this.scoreGame = 0;
-            this.score.setText(scoreGame + "");
-            this.counter = 60;
-            start.cancel();
-            start.start();
+            onResume();
         }
     }
 
     public void create() {
         ball = new Ball(randomX(ivArena.getWidth()), randomY(ivArena.getHeight()), ivArena.getWidth(), ivArena.getHeight(), colorBall);
         hole = new Ball(randomX(ivArena.getWidth()), randomY(ivArena.getHeight()), ivArena.getWidth(), ivArena.getHeight(), colorHole);
+//        if(setting.ballSize!=null){
+//            int newRad= Integer.parseInt(String.valueOf(setting.ballSize.getText()));
+//            ball.setRadius(newRad);
+//            hole.setRadius(newRad);
+//        }
     }
 }

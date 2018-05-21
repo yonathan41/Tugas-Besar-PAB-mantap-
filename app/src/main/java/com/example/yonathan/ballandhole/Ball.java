@@ -8,13 +8,18 @@ public class Ball {
     int kanan,bawah;
     int color,radius;
 
-    public Ball(float x, float y, int kanan, int bawah,int color) {
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public Ball(float x, float y, int kanan, int bawah, int color) {
         this.x = x;
         this.y = y;
         this.color=color;
         this.kecepatanX=0;
         this.kecepatanY=0;
         this.kanan=kanan;
+
         this.bawah=bawah;
         radius=100;
     }
